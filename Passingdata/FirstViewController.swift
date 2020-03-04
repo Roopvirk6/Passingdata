@@ -10,13 +10,15 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-    @IBOutlet weak var txtName: UIButton!
+    
+    @IBOutlet weak var txtName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func btnGoNext(_ sender: UIButton)
+    
+    @IBAction func txtName1(_ sender: UIButton)
     {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let secondVC = sb.instantiateViewController(identifier: "secondVC") as! SecondViewController

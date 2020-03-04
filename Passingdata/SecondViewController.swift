@@ -10,11 +10,17 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    var name : String?
+   
     
-
+    @IBOutlet weak var IblWelcome: UILabel!
+     var name : String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        //self.addClosebutton()
+        //let bvc = self.navigationController?.viewControllers[1]
+        //self.navigationController?.popViewController(animated: true)
+        //self.navigationController?.hidesBarsOnTap = true
         if let nm = name
         {
             self.IblWelcome.text = "Welcome, \(nm)"
@@ -26,6 +32,15 @@ class SecondViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
+    }
+    private func addClosebutton()
+    {
+        let btnclose = UIBarButtonItem(title: "CLOSE", style: .plain, target: self, action: #selector(self.goback))
+        self.navigationItem.rightBarButtonItem = btnclose
+    }
+    @objc func goback()
+    {
+        self.navigationController?.popViewController(animated: true)
     }
     
 
