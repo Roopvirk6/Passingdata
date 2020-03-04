@@ -16,8 +16,8 @@ class SecondViewController: UIViewController {
      var name : String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
-        //self.addClosebutton()
+       // self.navigationItem.hidesBackButton = true
+        self.addClosebutton()
         //let bvc = self.navigationController?.viewControllers[1]
         //self.navigationController?.popViewController(animated: true)
         //self.navigationController?.hidesBarsOnTap = true
